@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+
+<% include nav/header.ejs %>
+
+<h1><%= title %></h1>
+<p>나는 웹(<%= name %>)운영과 입니다.</p>
+
+<% for(i = 4; i <= 6; i++) {%>
+<p>1학년 <%= i %></p>
+<% }%>
+
+<% include nav/footer.ejs %>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('button').click(function() {
+                $('#div1').load('test.txt #p1');
+            })
+        })
+    </script>
+</head>
+<body>
+<div id="div1"><h2>jQuery AJAX의 내용을 가져오세요</h2></div>
+<button>go</button>
+</body>
+</html>

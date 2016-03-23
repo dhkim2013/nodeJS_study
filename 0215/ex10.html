@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+    <script>
+    function outer(var1, var2){
+    var local = 10;
+    function inner(innerArg){
+        console.log( ( var1+var2 ) / ( innerArg+local ) );
+     }
+     return inner;
+  }
+  var boo = outer(5,7);
+  boo(6);
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8"/>
+</head>
+<body>
+ <script>
+        // 변수 선언
+        var product = {
+            name: 'Microsoft Visual Studio 2012 Ultimate',
+            price: '15,000,000원',
+            language: '한국어',
+            supportOS: 'Win 32/64',
+            subscription: true
+        };
+
+        // 출력
+        var output = '';
+        for (var key in product) {
+                   // product 객체의 key를 첫번 째부터 순서대로 가져옴.
+            output += '●' + key + ': ' + product[key] + '\n';
+        }
+        alert(output);
+    </script>
+</body>
+</html>

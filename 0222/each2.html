@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var array = [
+                {name : 'Hanbit Media', link : 'http://hanb.co.kr'},
+                {name : 'Naver', link : 'http://naver.com'},
+                {name : 'Daum', link : 'http://daum.net'},
+                {name : 'Paran', link : 'http//paran.com'}
+            ];
+
+            $.each(array, function(index, item) {
+                var output = '';
+
+                output += '<a href="' + item.link + '">';
+                output += '    <h1>' + item.name + '</h1>';
+                output += '</a>';
+
+                document.body.innerHTML += output;
+            })
+        })
+    </script>
+</head>
+<body>
+
+</body>
+</html>

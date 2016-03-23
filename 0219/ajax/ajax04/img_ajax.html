@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta  charset="UTF-8">
+	<title></title>
+	
+	<style>
+		.image_panel{
+			border:1px solid #eeeeee;
+			text-align:center;
+			margin:5px;
+		}
+		.image_panel .title{
+			font-size:9pt;
+			color:#ff0000;
+		}
+		
+	</style>
+	</style>
+	<script  type="text/javascript"  src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	
+	<script>
+		var xmlHttp;
+		window.onload=function(){
+			$("#btn_load").click(function(){
+				startLoadFile();	
+			});
+			
+		}
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+		//7.JSON 포멧 데이터 처리.
+		function createImages(strInfo){
+			//1. JSON 포멧 문자열을 JavaScript Object로 변경시키기.
+			var objImageInfo = eval("("+strInfo+")"); 
+			var images = objImageInfo.rows;
+			
+			var strDOM = "";
+			for(var i=0;i<images.length;i++){
+				//2. N번째 이미지 정보 구하기.
+				var image =images[i];
+				
+				//3. N번째 이미지 패널 생성하기.			
+				strDOM +='<div class="image_panel">'
+				strDOM +='    <img src="'+image.url+'">';
+				strDOM +='    <p class="title">'+image.title+'</p>';
+				strDOM +='</div>';						
+			}
+			
+			//4. 이미지 컨테이너에 3번째에서 생성한 이미지 패널들을 추가하기.
+			var $imageContainer = $("#image_container");
+			$imageContainer.append(strDOM);
+		}
+		
+	</script>
+</head>
+
+	<body>
+		<div>
+			<button id="btn_load">이미지 읽어들이기</button>
+		</div>
+		<div id="image_container">
+			<!-- 1. 이곳에 이미지를 넣어주세요-->
+		</div>
+		
+		<!-- 2. 이 내용은 이미지 패널 템플릿입니다. -->
+		<div style="display:none;" id="image_panel_template">
+			<div class="image_panel">
+				<img >
+				<p class="title"></p>
+			</div>
+		</div>
+	</body>
+
+</html>
+
+

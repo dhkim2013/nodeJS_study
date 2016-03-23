@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>1</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.ajax({
+                url : '/ex.html',
+                success : function(data) {
+                    $('body').append(data);
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+hi
+</body>
+</html>
